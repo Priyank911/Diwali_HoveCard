@@ -1,0 +1,193 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 35vh;
+    min-height: 190vh;
+    background: linear-gradient(45deg,#e6af84,#f73d04);
+}
+.card{
+    position: relative;
+    width: 600px;
+    height: 190px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+.card:hover{
+    height: 450px; 
+}
+.imgbx{
+    position: absolute;
+    left: 50%;
+    top: -70px;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 200px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.card:hover .imgbx{
+    width: 500px;
+    height: 250px;
+}
+.imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.card .content .details{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(150px);
+}
+.card:hover .content .details{
+    transform: translateY(0px);
+}
+.card .content .details h2{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+.card .content .details h2 span{
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+.card .content .details .data{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.card .content .details .data h3{
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+.card .content .details .data h3 span{
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+.card .content .details .actionbtn{
+    display: flex;
+    justify-content: space-between;
+    /*gap: 20px; */
+}
+.card .content .details .actionbtn button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 500;
+    background: #ff5f95;
+    color: #fff;
+    cursor: pointer;
+}
+.card .content .details .actionbtn button:nth-child(2){
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;
+
+}
+.cake {
+position:absolute;
+width: 250px;
+height: 200px;
+top: 50%;
+left: 50%;
+margin-top: -70px;
+margin-left: -125px;
+}
+
+.cake > * {
+position: absolute;
+}
+.candle {
+background-color: #7B020B;
+width: 100px;
+height: 50px;
+border-radius: 8px / 4px;
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+border-bottom-left-radius:35px;
+border-bottom-right-radius:35px;
+bottom: 40px;
+left: 40%;
+margin-left: -8px;
+z-index: 10;
+}
+.candle:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100px;
+height: 8px;
+border-radius: 50%;
+background-color: #ad030f;
+}
+
+.flame {
+position: absolute;
+background-color: orange;
+width: 15px;
+height: 35px;
+border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
+top: -34px;
+left: 90%;
+margin-left: -7.5px;
+z-index: 10;
+box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+transform-origin: 50% 90%;
+animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+0% {
+transform: skewX(5deg);
+box-shadow: 0 0 10px rgba(255, 165, 0, 0.2), 0 0 20px rgba(255, 165, 0, 0.2), 0 0 60px rgba(255, 165, 0, 0.2), 0 0 80px rgba(255, 165, 0, 0.2);
+}
+25% {
+transform: skewX(-5deg);
+box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+}
+50% {
+transform: skewX(10deg);
+box-shadow: 0 0 10px rgba(255, 165, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 165, 0, 0.3), 0 0 80px rgba(255, 165, 0, 0.3);
+}
+75% {
+transform: skewX(-10deg);
+box-shadow: 0 0 10px rgba(255, 165, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.4), 0 0 60px rgba(255, 165, 0, 0.4), 0 0 80px rgba(255, 165, 0, 0.4);
+}
+100% {
+transform: skewX(5deg);
+box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+}
+}
